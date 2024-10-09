@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-storage.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Image Management</h1>
+    <input type="file" id="imageUpload" multiple>
+    <button onclick="uploadImages()">Upload Images</button>
+    
+    <h1>Send Push Notification</h1>
+    <form id="notificationForm" onsubmit="sendNotification(event)">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="body" placeholder="Body" required>
+        <input type="text" id="carId" placeholder="Car ID" required>
+        <button type="submit">Send Notification</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
